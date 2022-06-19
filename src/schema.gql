@@ -1,0 +1,32 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateQuestionInput {
+  answerNumber: Float
+  answerString: String
+  content: String!
+}
+
+type Mutation {
+  createQuestion(createQuestionInput: CreateQuestionInput!): Question!
+}
+
+type Query {
+  questions: [Question!]!
+  sayHello: String!
+}
+
+type Question {
+  answerNumber: Float
+  answerString: String
+  content: String!
+  difficulty: String
+
+  """id of the question"""
+  id: Int!
+}
+
+type Subscription {
+  questionAdded: String!
+}
